@@ -1,0 +1,47 @@
+{% load static %}
+{% load i18n %}
+<style>
+    .tf-slideshow.slider-home-5 .wrap-slider {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.tf-slideshow.slider-home-5 .wrap-slider img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+</style>
+<!-- Updated Aristo Design - Slider in new layout -->
+
+<section class="tf-slideshow slider-effect-fade slider-video position-relative">
+    <div class="swiper tf-sw-slideshow" data-preview="1" data-tablet="1" data-mobile="1" data-centered="false" data-space="0" data-loop="true" data-auto-play="true" data-delay="2000" data-speed="1000">
+        <div class="swiper-wrapper">
+{% for slide in sliders %}
+<div class="swiper-slide" lazy="true">
+    <div class="wrap-slider">
+        <img class="lazyload" data-src="{{ slide.image.url }}" src="{{ slide.image.url }}" alt="{{ slide.alt_text }}">
+        <div class="box-content text-center">
+            <div class="container">
+                <h1 class="fade-item fade-item-1 text_aristo heading" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
+                    {{ slide.heading }}
+                </h1>
+                <p class="fade-item fade-item-2 text_aristo" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
+                    {{ slide.subheading }}
+                </p>
+                <a href="{{ slide.get_button_url }}" class="fade-item fade-item-3 tf-btn btn-light-icon animate-hover-btn btn-xl radius-3">
+                    <span>{{ slide.button_text }}</span><i class="icon icon-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+        </div>
+    </div>
+    <div class="wrap-pagination">
+        <div class="sw-dots style-2 dots-white sw-pagination-slider justify-content-center"></div>
+    </div>
+</section>

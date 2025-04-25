@@ -1,0 +1,42 @@
+{% load static %}
+{% load i18n %}
+<!-- Aristo Design - تعريف -->
+<style>
+    .tf-img-with-text .tf-image-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: 30rem;
+    }
+</style>
+
+<section class="flat-spacing-19 pt_0 pb_0" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
+    <div class="container">
+        <div class="tf-grid-layout bg_e7e4df gap-0 rounded-0 md-col-2 tf-img-with-text style-3">
+
+            <!-- Content -->
+            <div class="tf-content-wrap text-end">
+                <div>
+                    <h2 class="heading wow fadeInUp" data-wow-delay="0s">
+                        {% trans "أريستو ديزاين" %}<br>
+                        {% trans "لتشطيبات الشقق والفلل" %}
+                    </h2>
+                    <p class="description text_black-2 wow fadeInUp" data-wow-delay="0s">
+                        {% trans "نقدم خدمات التشطيب والديكور المتكاملة بمستوى احترافي يتناسب مع ذوقك واحتياجاتك." %}<br>
+                        {% trans "نتميز بتقديم تصاميم عصرية، تنفيذ دقيق، وجودة عالية في كل مشروع." %}
+                    </p>
+                    <a href="{% url 'about_page' %}" class="tf-btn btn-line">
+                        {% trans "تعرف على خدماتنا" %} <i class="icon icon-arrow1-top-left"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="tf-image-wrap">
+                <img class="lazyload" data-src="{% static 'images/logo/logo.png' %}" src="{% static 'images/logo/logo.png' %}" alt="{% trans 'أريستو ديزاين' %}">
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- /Aristo Design -->

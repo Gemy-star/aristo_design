@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-23 22:53+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\aristo\settings.py:122
+msgid "English"
+msgstr "الإنجليزية"
+
+#: .\aristo\settings.py:123
+msgid "Arabic"
+msgstr "العربية"
+
+#: .\aristo\settings.py:124
+msgid "French"
+msgstr "الفرنسية"
+
+#: .\templates\base.html:9 .\templates\partials\_footer.html:16
+msgid "Aristo Design"
+msgstr "تصميم أريستو"
+
+#: .\templates\partials\_footer.html:13
+#, fuzzy
+#| msgid "اعرف المزيد"
+msgid "شعار الموقع"
+msgstr "اعرف المزيد"
+
+#: .\templates\partials\_footer.html:16
+#, fuzzy
+#| msgid "اعرف المزيد"
+msgid "اسم المؤسسة:"
+msgstr "اعرف المزيد"
+
+#: .\templates\partials\_footer.html:17
+msgid "المقر:"
+msgstr "المقر:"
+
+#: .\templates\partials\_footer.html:17
+msgid "القاهرة,مصر"
+msgstr "القاهرة,مصر"
+
+#: .\templates\partials\_footer.html:18
+#, fuzzy
+#| msgid "البريد الإلكتروني"
+msgid "البريد الإلكتروني:"
+msgstr "البريد الإلكتروني"
+
+#: .\templates\partials\_header.html:37 .\templates\partials\_header.html:51
+msgid "الرئيسية"
+msgstr "الرئيسية"
+
+#: .\templates\partials\_header.html:38 .\templates\partials\_header.html:52
+#, fuzzy
+#| msgid "اعرف المزيد"
+msgid "عن المؤسسة"
+msgstr "اعرف المزيد"
+
+#: .\templates\partials\_header.html:39 .\templates\partials\_header.html:53
+msgid "إتصل بنا"
+msgstr "إتصل بنا"
+
+#: .\templates\partials\_header.html:40 .\templates\partials\_header.html:54
+msgid "أخبارنا"
+msgstr "أخبارنا"
+
+#: .\templates\partials\home\_blogs.html:7
+msgid "آخر المقالات"
+msgstr "آخر المقالات"
+
+#: .\templates\partials\home\_blogs.html:31
+msgid "صورة المقال"
+msgstr "صورة المقال"
+
+#: .\templates\partials\home\_blogs.html:36
+msgid "اقرأ المزيد"
+msgstr "اقرأ المزيد"
+
+#: .\templates\partials\home\_blogs.html:38
+msgid "#مقال"
+msgstr "#مقال"
+
+#: .\templates\partials\home\_contact.html:7
+msgid "صورة تواصل"
+msgstr "صورة تواصل"
+
+#: .\templates\partials\home\_contact.html:10
+msgid "تواصل معنا"
+msgstr "تواصل معنا"
+
+#: .\templates\partials\home\_contact.html:14
+msgid "الاسم"
+msgstr "الاسم"
+
+#: .\templates\partials\home\_contact.html:18
+msgid "البريد الإلكتروني"
+msgstr "البريد الإلكتروني"
+
+#: .\templates\partials\home\_gallery.html:7
+msgid "معرض الصور"
+msgstr "معرض الصور"
+
+#: .\templates\partials\home\_gallery.html:20
+msgid "صورة من أعمالنا"
+msgstr "صورة من أعمالنا"
+
+#: .\templates\partials\home\_info.html:21
+#: .\templates\partials\home\_info.html:36
+#: .\templates\partials\home\_slider.html:17
+#: .\templates\partials\home\_slider.html:31
+msgid "أريستو ديزاين"
+msgstr "أريستو ديزاين"
+
+#: .\templates\partials\home\_info.html:22
+msgid "لتشطيبات الشقق والفلل"
+msgstr "لتشطيبات الشقق والفلل"
+
+#: .\templates\partials\home\_info.html:25
+msgid ""
+"نقدم خدمات التشطيب والديكور المتكاملة بمستوى احترافي يتناسب مع ذوقك "
+"واحتياجاتك."
+msgstr ""
+"نقدم خدمات التشطيب والديكور المتكاملة بمستوى احترافي يتناسب مع ذوقك "
+"واحتياجاتك."
+
+#: .\templates\partials\home\_info.html:26
+msgid "نتميز بتقديم تصاميم عصرية، تنفيذ دقيق، وجودة عالية في كل مشروع."
+msgstr "نتميز بتقديم تصاميم عصرية، تنفيذ دقيق، وجودة عالية في كل مشروع."
+
+#: .\templates\partials\home\_info.html:29
+msgid "تعرف على خدماتنا"
+msgstr "تعرف على خدماتنا"
+
+#: .\templates\partials\home\_projects.html:16
+msgid "أعمالنا"
+msgstr "أعمالنا"
+
+#: .\templates\partials\home\_projects.html:32
+msgid "صورة المشروع"
+msgstr "صورة المشروع"
+
+#: .\templates\partials\home\_projects.html:49
+msgid "إكتشف جميع مشاريعنا"
+msgstr "إكتشف جميع مشاريعنا"
+
+#: .\templates\partials\home\_slider.html:17
+msgid "خبرة في تشطيبات الشقق والفلل"
+msgstr "خبرة في تشطيبات الشقق والفلل"
+
+#: .\templates\partials\home\_slider.html:20
+msgid "نقدم حلول تشطيب متكاملة بإبداع وجودة عالية."
+msgstr "نقدم حلول تشطيب متكاملة بإبداع وجودة عالية."
+
+#: .\templates\partials\home\_slider.html:23
+msgid "اعرف المزيد"
+msgstr "اعرف المزيد"
+
+#: .\templates\partials\home\_slider.html:45
+msgid "تصاميم داخلية"
+msgstr "تصاميم داخلية"
+
+#: .\templates\partials\home\_slider.html:45
+msgid "تُجسد ذوقك"
+msgstr "تُجسد ذوقك"
+
+#: .\templates\partials\home\_slider.html:48
+msgid "ننفذ تصاميم عصرية تلائم احتياجاتك وتفاصيل منزلك."
+msgstr "ننفذ تصاميم عصرية تلائم احتياجاتك وتفاصيل منزلك."
+
+#: .\templates\partials\home\_slider.html:51
+msgid "خدماتنا"
+msgstr "خدماتنا"
+
+#: .\templates\partials\home\_slider.html:59
+msgid "تصميم داخلي"
+msgstr "تصميم داخلي"
+
+#: .\templates\partials\home\_slider.html:73
+#: .\templates\partials\home\_slider.html:87
+msgid "تشطيب فاخر"
+msgstr "تشطيب فاخر"
+
+#: .\templates\partials\home\_slider.html:73
+msgid "لكل تفاصيل منزلك"
+msgstr "لكل تفاصيل منزلك"
+
+#: .\templates\partials\home\_slider.html:76
+msgid "من المواد وحتى الإضاءة، نحرص على أدق التفاصيل."
+msgstr "من المواد وحتى الإضاءة، نحرص على أدق التفاصيل."
+
+#: .\templates\partials\home\_slider.html:79
+msgid "اعرض مشاريعنا"
+msgstr "اعرض مشاريعنا"
