@@ -1,11 +1,11 @@
 {% load static %}
 {% load i18n %}
 
-<section class="flat-spacing-12" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
+<section class="flat-spacing-12 pb_2" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4">
-                <img class="img-fluid rounded" src="{% static 'images/blog/ksa-sea.jpg' %}" alt="{% trans 'صورة تواصل' %}">
+                <img class="img-fluid rounded" src="{% static 'images/slider/alaa (1).jpg' %}" alt="{% trans 'صورة تواصل' %}">
             </div>
             <div class="col-md-6">
                 <h3 class="mb-4 text-white">{% trans "تواصل معنا" %}</h3>
@@ -26,10 +26,13 @@
                         <textarea name="message" rows="5" class="form-control" placeholder="{% trans 'رسالتك' %}"></textarea>
                         <div class="invalid-feedback" id="error-message"></div>
                     </div>
-
-                    <button type="submit" class="btn text-black bg_aristo">
+                    <div class="mb-3 d-flex justify-content-center">
+                            <button type="submit" class="btn text-black bg_aristo text-center">
                         {% trans "إرسال" %}
                     </button>
+                    </div>
+
+
                 </form>
             </div>
         </div>
