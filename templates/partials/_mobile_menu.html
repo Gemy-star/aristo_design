@@ -9,10 +9,12 @@
                                 <li class="nav-mb-item"><a href="{% url 'about_page' %}" class="item-link ">{% trans "عن المؤسسة" %}</a></li>
                                 <li class="nav-mb-item"><a href="{% url 'contact_page' %}" class="item-link ">{% trans "إتصل بنا" %}</a></li>
                                 <li class="nav-mb-item"><a href="{% url 'blogs_page' %}" class="item-link ">{% trans "أخبارنا" %}</a></li>
+                                 <li class="nav-mb-item"><a href="{% url 'project_list' %}" class="item-link ">{% trans "أعمالنا" %}</a></li>
+
                 </ul>
                 <div class="mb-other-content">
                     <div class="mb-notice">
-                        <a href="{% url 'contact_page' %}" class="text-need">Need help ?</a>
+                        <a href="{% url 'contact_page' %}" class="text-need">{% trans 'تحتاج مساعدة' %}</a>
                     </div>
                     <ul class="mb-info">
                            <li class="text-black"><strong>{% trans 'اسم المؤسسة:' %}</strong> Aristo Design</li>
@@ -24,13 +26,14 @@
             <div class="mb-bottom">
                 <div class="bottom-bar-language">
                     <div class="tf-languages">
-                    <form method="GET" action="{% url 'set_language' %}">
-                        <select name="language" class="form-select-lg image-select center style-default type-languages color-black" onchange="this.form.submit()">
-                            <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-                            <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربية</option>
-                            <option value="fr" {% if LANGUAGE_CODE == 'fr' %}selected{% endif %}>Français</option>
-                        </select>
-                    </form>
+                  <form method="POST" action="{% url 'set_language' %}">
+    {% csrf_token %}
+                      <input type="hidden" name="next" value="{{ request.path }}">
+    <select name="language" class="form-select-lg form-control image-select center style-default type-languages text-white" onchange="this.form.submit()">
+        <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+        <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربية</option>
+    </select>
+</form>
                 </div>
                 </div>
             </div>

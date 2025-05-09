@@ -1,5 +1,21 @@
 {% load static %}
 {% load i18n %}
+<style>
+    .tf-sw-our-projects .swiper-slide {
+        width: 450px !important;   /* adjust width */
+        height: 330px !important;  /* adjust height */
+    }
+
+    .tf-sw-our-projects .collection-item {
+        height: 100%;
+    }
+
+    .tf-sw-our-projects .collection-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
 <!-- Aristo Design - Projects Section -->
 <section class="flat-spacing-4 flat-categories pb_2">
     <div class="container">
@@ -19,13 +35,13 @@
 
         <div class="row">
             <div class="col-xl-9 col-lg-8 col-md-8">
-                <div class="swiper tf-sw-collection"
+                <div class="swiper tf-sw-collection tf-sw-our-projects"
                      data-preview="3" data-tablet="2" data-mobile="2"
                      data-space-lg="30" data-space-md="30" data-space="15"
                      data-loop="false" data-auto-play="false">
                     <div class="swiper-wrapper">
                         {% for proj in projects %}
-                        <div class="swiper-slide" lazy="true">
+                        <div class="swiper-slide " lazy="true" >
                             <div class="collection-item style-left hover-img">
                                 <div class="collection-inner">
                                     <a href="{% url 'project_detail' proj.pk %}" class="collection-image img-style">
@@ -38,8 +54,8 @@
                                         {% endwith %}
                                     </a>
                                     <div class="collection-content">
-                                        <a href="{% url 'project_detail' proj.pk %}" class="tf-btn collection-title hover-icon fs-15">
-                                            <span class="text-white">{{ proj.name }}</span>
+                                        <a href="{% url 'project_detail' proj.pk %}" class="tf-btn collection-title hover-icon fs-15 bg-dark">
+                                            <span class="text-white">{{ proj.title }}</span>
                                             <i class="icon icon-arrow1-top-left text-white"></i>
                                         </a>
                                     </div>
@@ -50,15 +66,16 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-4">
+        {% if view_more %}
+                    <div class="col-xl-3 col-lg-4 col-md-4">
                 <div class="discovery-new-item text-end">
                     <h5 class="text-white">{% trans "إكتشف جميع مشاريعنا" %}</h5>
-                    <a class="text-white" href="{% url 'projects_page' %}">
+                    <a class="text-white" href="{% url 'project_list' %}">
                         <i class="icon-arrow1-top-left text-white"></i>
                     </a>
                 </div>
             </div>
+        {% endif %}
         </div>
     </div>
 </section>

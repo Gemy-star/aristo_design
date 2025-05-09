@@ -24,10 +24,10 @@
         <img class="lazyload" data-src="{{ slide.image.url }}" src="{{ slide.image.url }}" alt="{{ slide.alt_text }}">
         <div class="box-content text-center">
             <div class="container">
-                <h1 class="fade-item fade-item-1 text_aristo heading" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
+                <h1 class="fade-item fade-item-1 text-white heading" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
                     {{ slide.heading }}
                 </h1>
-                <p class="fade-item fade-item-2 text_aristo" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
+                <p class="fade-item fade-item-2 text-white" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
                     {{ slide.subheading }}
                 </p>
                 <a href="{{ slide.get_button_url }}" class="fade-item fade-item-3 tf-btn btn-light-icon animate-hover-btn btn-xl radius-3">

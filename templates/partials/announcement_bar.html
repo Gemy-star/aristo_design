@@ -24,11 +24,12 @@
             </div>
             <div class="top-bar-language tf-cur justify-content-end">
                 <div class="tf-languages">
-                    <form method="GET" action="{% url 'set_language' %}">
-                        <select name="language" class="form-select-lg image-select center style-default type-languages color-white" onchange="this.form.submit()">
+                    <form method="POST" action="{% url 'set_language' %}">
+                       {% csrf_token %}
+                        <input type="hidden" name="next" value="{{ request.path }}">
+                        <select name="language" class="form-select-lg  image-select center style-default type-languages color-white" onchange="this.form.submit()">
                             <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
                             <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربية</option>
-                            <option value="fr" {% if LANGUAGE_CODE == 'fr' %}selected{% endif %}>Français</option>
                         </select>
                     </form>
                 </div>

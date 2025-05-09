@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-23 22:53+0200\n"
+"POT-Creation-Date: 2025-05-09 22:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,57 +26,269 @@ msgstr "English"
 msgid "Arabic"
 msgstr "Arabic"
 
-#: .\aristo\settings.py:124
-msgid "French"
-msgstr "French"
+#: .\main\models.py:8
+msgid "Slider Image"
+msgstr ""
 
-#: .\templates\base.html:9 .\templates\partials\_footer.html:16
+#: .\main\models.py:17
+msgid "Alt Text"
+msgstr ""
+
+#: .\main\models.py:18
+msgid "Heading"
+msgstr ""
+
+#: .\main\models.py:19
+msgid "Subheading"
+msgstr ""
+
+#: .\main\models.py:20
+msgid "Button Text"
+msgstr ""
+
+#: .\main\models.py:23
+msgid "Django URL Name"
+msgstr ""
+
+#: .\main\models.py:24
+msgid "Enter the Django URL name (e.g. 'about_page', 'blogs_page')."
+msgstr ""
+
+#: .\main\models.py:26
+msgid "Display Order"
+msgstr ""
+
+#: .\main\models.py:27
+msgid "Active"
+msgstr ""
+
+#: .\main\models.py:31
+msgid "Home Slider"
+msgstr ""
+
+#: .\main\models.py:32
+msgid "Home Sliders"
+msgstr ""
+
+#: .\main\models.py:44 .\main\models.py:68 .\main\models.py:85
+msgid "Title"
+msgstr ""
+
+#: .\main\models.py:45 .\main\models.py:69
+msgid "Content"
+msgstr ""
+
+#: .\main\models.py:46 .\main\models.py:70
+msgid "Date"
+msgstr ""
+
+#: .\main\models.py:49
+msgid "Announcement"
+msgstr ""
+
+#: .\main\models.py:50
+msgid "Announcements"
+msgstr ""
+
+#: .\main\models.py:57 .\main\models.py:121
+msgid "Name"
+msgstr ""
+
+#: .\main\models.py:60 .\main\models.py:73
+msgid "Category"
+msgstr ""
+
+#: .\main\models.py:61
+msgid "Categories"
+msgstr ""
+
+#: .\main\models.py:77
+msgid "Blog"
+msgstr ""
+
+#: .\main\models.py:78
+msgid "Blogs"
+msgstr ""
+
+#: .\main\models.py:86
+msgid "Description"
+msgstr ""
+
+#: .\main\models.py:87 .\main\models.py:125
+msgid "Created At"
+msgstr ""
+
+#: .\main\models.py:90 .\main\models.py:100
+msgid "Project"
+msgstr ""
+
+#: .\main\models.py:91
+msgid "Projects"
+msgstr ""
+
+#: .\main\models.py:102
+msgid "Image"
+msgstr ""
+
+#: .\main\models.py:113
+msgid "Project Image"
+msgstr ""
+
+#: .\main\models.py:114
+msgid "Project Images"
+msgstr ""
+
+#: .\main\models.py:122
+msgid "Email"
+msgstr ""
+
+#: .\main\models.py:123
+msgid "Subject"
+msgstr ""
+
+#: .\main\models.py:124
+msgid "Message"
+msgstr ""
+
+#: .\main\models.py:128
+msgid "Contact Message"
+msgstr ""
+
+#: .\main\models.py:129
+msgid "Contact Messages"
+msgstr ""
+
+#: .\main\views.py:63
+#, fuzzy
+#| msgid "الاسم"
+msgid "الاسم مطلوب"
+msgstr "Name"
+
+#: .\main\views.py:65
+#, fuzzy
+#| msgid "البريد الإلكتروني"
+msgid "البريد الإلكتروني مطلوب"
+msgstr "Email"
+
+#: .\main\views.py:67
+msgid "الموضوع مطلوب"
+msgstr "Subject needed"
+
+#: .\main\views.py:69
+msgid "الرسالة مطلوبة"
+msgstr "message needed"
+
+#: .\templates\base.html:10
 msgid "Aristo Design"
 msgstr "Aristo Design"
 
-#: .\templates\partials\_footer.html:13
-#, fuzzy
-#| msgid "اعرف المزيد"
-msgid "شعار الموقع"
-msgstr "Learn More"
-
-#: .\templates\partials\_footer.html:16
-#, fuzzy
-#| msgid "اعرف المزيد"
-msgid "اسم المؤسسة:"
-msgstr "About Us"
-
-#: .\templates\partials\_footer.html:17
-msgid "المقر:"
-msgstr "Location"
-
-#: .\templates\partials\_footer.html:17
-msgid "القاهرة,مصر"
-msgstr "Cairo,Egypt"
-
-#: .\templates\partials\_footer.html:18
-#, fuzzy
-#| msgid "البريد الإلكتروني"
-msgid "البريد الإلكتروني:"
-msgstr "Email"
-
-#: .\templates\partials\_header.html:37 .\templates\partials\_header.html:51
-msgid "الرئيسية"
-msgstr "Home"
-
-#: .\templates\partials\_header.html:38 .\templates\partials\_header.html:52
+#: .\templates\pages\about.html:9 .\templates\pages\about.html:18
+#: .\templates\partials\_header.html:40
+#: .\templates\partials\_mobile_menu.html:9
 #, fuzzy
 #| msgid "اعرف المزيد"
 msgid "عن المؤسسة"
 msgstr "About Us"
 
-#: .\templates\partials\_header.html:39 .\templates\partials\_header.html:53
+#: .\templates\pages\about.html:12 .\templates\pages\blogs.html:14
+#: .\templates\pages\contact.html:14 .\templates\pages\project_list.html:12
+#: .\templates\partials\_header.html:39
+#: .\templates\partials\_mobile_menu.html:8
+msgid "الرئيسية"
+msgstr "Home"
+
+#: .\templates\pages\blog_detail.html:25
+msgid "تم النشر في"
+msgstr "Created at"
+
+#: .\templates\pages\blog_detail.html:53
+msgid "السابق"
+msgstr "Prev"
+
+#: .\templates\pages\blog_detail.html:63
+msgid "التالي"
+msgstr "Next"
+
+#: .\templates\pages\blogs.html:11 .\templates\pages\blogs.html:20
+#: .\templates\partials\_header.html:42
+#: .\templates\partials\_mobile_menu.html:11
+msgid "أخبارنا"
+msgstr "Projects"
+
+#: .\templates\pages\blogs.html:39
+msgid "img-blog"
+msgstr ""
+
+#: .\templates\pages\blogs.html:58
+msgid "Read more"
+msgstr ""
+
+#: .\templates\pages\blogs.html:67
+msgid "التصنيفات"
+msgstr "Categories"
+
+#: .\templates\pages\blogs.html:79
+msgid "نشر حديثا"
+msgstr "recently published"
+
+#: .\templates\pages\contact.html:11 .\templates\pages\contact.html:20
+#: .\templates\partials\_header.html:41
+#: .\templates\partials\_mobile_menu.html:10
 msgid "إتصل بنا"
 msgstr "Contact Us"
 
-#: .\templates\partials\_header.html:40 .\templates\partials\_header.html:54
-msgid "أخبارنا"
-msgstr "Projects"
+#: .\templates\pages\project_detail.html:13
+#, fuzzy
+#| msgid "صورة المشروع"
+msgid "مشروع"
+msgstr "Project Image"
+
+#: .\templates\pages\project_detail.html:20
+msgid "تم الانتهاء"
+msgstr "Created at"
+
+#: .\templates\pages\project_list.html:9 .\templates\pages\project_list.html:18
+#: .\templates\partials\_header.html:43
+#: .\templates\partials\_mobile_menu.html:12
+#: .\templates\partials\home\_projects.html:32
+msgid "أعمالنا"
+msgstr "Our Works"
+
+#: .\templates\partials\_footer.html:12
+#, fuzzy
+#| msgid "اعرف المزيد"
+msgid "شعار الموقع"
+msgstr "Learn More"
+
+#: .\templates\partials\_footer.html:15
+#: .\templates\partials\_mobile_menu.html:20
+#, fuzzy
+#| msgid "اعرف المزيد"
+msgid "اسم المؤسسة:"
+msgstr "About Us"
+
+#: .\templates\partials\_footer.html:16
+#: .\templates\partials\_mobile_menu.html:21
+msgid "المقر:"
+msgstr "Location"
+
+#: .\templates\partials\_footer.html:16
+#: .\templates\partials\_mobile_menu.html:21
+#, fuzzy
+#| msgid "القاهرة,مصر"
+msgid "القاهرة، مصر"
+msgstr "Cairo,Egypt"
+
+#: .\templates\partials\_footer.html:17
+#: .\templates\partials\_mobile_menu.html:22
+#, fuzzy
+#| msgid "البريد الإلكتروني"
+msgid "البريد الإلكتروني:"
+msgstr "Email"
+
+#: .\templates\partials\_mobile_menu.html:17
+msgid "تحتاج مساعدة"
+msgstr "Need Help"
 
 #: .\templates\partials\home\_blogs.html:7
 msgid "آخر المقالات"
@@ -94,21 +306,29 @@ msgstr "Read More"
 msgid "#مقال"
 msgstr "#Article"
 
-#: .\templates\partials\home\_contact.html:7
+#: .\templates\partials\home\_contact.html:8
 msgid "صورة تواصل"
 msgstr "Contact Image"
 
-#: .\templates\partials\home\_contact.html:10
+#: .\templates\partials\home\_contact.html:11
 msgid "تواصل معنا"
 msgstr "Contact Us"
 
-#: .\templates\partials\home\_contact.html:14
+#: .\templates\partials\home\_contact.html:16
 msgid "الاسم"
 msgstr "Name"
 
-#: .\templates\partials\home\_contact.html:18
+#: .\templates\partials\home\_contact.html:21
 msgid "البريد الإلكتروني"
 msgstr "Email"
+
+#: .\templates\partials\home\_contact.html:26
+msgid "رسالتك"
+msgstr "Your message"
+
+#: .\templates\partials\home\_contact.html:31
+msgid "إرسال"
+msgstr "Send"
 
 #: .\templates\partials\home\_gallery.html:7
 msgid "معرض الصور"
@@ -120,13 +340,13 @@ msgstr "Image from Our Work"
 
 #: .\templates\partials\home\_info.html:21
 #: .\templates\partials\home\_info.html:36
-#: .\templates\partials\home\_slider.html:17
-#: .\templates\partials\home\_slider.html:31
 msgid "أريستو ديزاين"
 msgstr "Aristo Design"
 
 #: .\templates\partials\home\_info.html:22
-msgid "لتشطيبات الشقق والفلل"
+#, fuzzy
+#| msgid "لتشطيبات الشقق والفلل"
+msgid "لتشطيبات الشقق والفيلل"
 msgstr "For Apartment and Villa Finishes"
 
 #: .\templates\partials\home\_info.html:25
@@ -147,64 +367,55 @@ msgstr ""
 msgid "تعرف على خدماتنا"
 msgstr "Learn About Our Services"
 
-#: .\templates\partials\home\_projects.html:16
-msgid "أعمالنا"
-msgstr "Our Works"
-
-#: .\templates\partials\home\_projects.html:32
+#: .\templates\partials\home\_projects.html:50
 msgid "صورة المشروع"
 msgstr "Project Image"
 
-#: .\templates\partials\home\_projects.html:49
+#: .\templates\partials\home\_projects.html:52
+msgid "لا توجد صورة"
+msgstr "no photo"
+
+#: .\templates\partials\home\_projects.html:72
 msgid "إكتشف جميع مشاريعنا"
 msgstr "Discover All Our Projects"
 
-#: .\templates\partials\home\_slider.html:17
-msgid "خبرة في تشطيبات الشقق والفلل"
-msgstr "Experience in Apartment and Villa Finishes"
+#~ msgid "French"
+#~ msgstr "French"
 
-#: .\templates\partials\home\_slider.html:20
-msgid "نقدم حلول تشطيب متكاملة بإبداع وجودة عالية."
-msgstr ""
-"We provide integrated finishing solutions with creativity and high quality."
+#~ msgid "خبرة في تشطيبات الشقق والفلل"
+#~ msgstr "Experience in Apartment and Villa Finishes"
 
-#: .\templates\partials\home\_slider.html:23
-msgid "اعرف المزيد"
-msgstr "Learn More"
+#~ msgid "نقدم حلول تشطيب متكاملة بإبداع وجودة عالية."
+#~ msgstr ""
+#~ "We provide integrated finishing solutions with creativity and high "
+#~ "quality."
 
-#: .\templates\partials\home\_slider.html:45
-msgid "تصاميم داخلية"
-msgstr "Interior Designs"
+#~ msgid "اعرف المزيد"
+#~ msgstr "Learn More"
 
-#: .\templates\partials\home\_slider.html:45
-msgid "تُجسد ذوقك"
-msgstr "Reflects Your Taste"
+#~ msgid "تصاميم داخلية"
+#~ msgstr "Interior Designs"
 
-#: .\templates\partials\home\_slider.html:48
-msgid "ننفذ تصاميم عصرية تلائم احتياجاتك وتفاصيل منزلك."
-msgstr "We execute modern designs that suit your needs and home details."
+#~ msgid "تُجسد ذوقك"
+#~ msgstr "Reflects Your Taste"
 
-#: .\templates\partials\home\_slider.html:51
-msgid "خدماتنا"
-msgstr "Our Services"
+#~ msgid "ننفذ تصاميم عصرية تلائم احتياجاتك وتفاصيل منزلك."
+#~ msgstr "We execute modern designs that suit your needs and home details."
 
-#: .\templates\partials\home\_slider.html:59
-msgid "تصميم داخلي"
-msgstr "Interior Design"
+#~ msgid "خدماتنا"
+#~ msgstr "Our Services"
 
-#: .\templates\partials\home\_slider.html:73
-#: .\templates\partials\home\_slider.html:87
-msgid "تشطيب فاخر"
-msgstr "Luxury Finishing"
+#~ msgid "تصميم داخلي"
+#~ msgstr "Interior Design"
 
-#: .\templates\partials\home\_slider.html:73
-msgid "لكل تفاصيل منزلك"
-msgstr "For Every Detail of Your Home"
+#~ msgid "تشطيب فاخر"
+#~ msgstr "Luxury Finishing"
 
-#: .\templates\partials\home\_slider.html:76
-msgid "من المواد وحتى الإضاءة، نحرص على أدق التفاصيل."
-msgstr "From materials to lighting, we take care of the smallest details."
+#~ msgid "لكل تفاصيل منزلك"
+#~ msgstr "For Every Detail of Your Home"
 
-#: .\templates\partials\home\_slider.html:79
-msgid "اعرض مشاريعنا"
-msgstr "Show Our Projects"
+#~ msgid "من المواد وحتى الإضاءة، نحرص على أدق التفاصيل."
+#~ msgstr "From materials to lighting, we take care of the smallest details."
+
+#~ msgid "اعرض مشاريعنا"
+#~ msgstr "Show Our Projects"
