@@ -224,6 +224,30 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+.btn-whatsapp {
+  background-color: var(--green-color);
+  color: var(--white-color);
+}
+
+.btn-whatsapp:hover {
+  background-color: #3d9140; /* أخضر داكن */
+}
+.whatsapp {
+  position: fixed;
+  bottom: 85px;     /* Distance from bottom */
+  left: 30px;      /* Distance from right */
+  width: 40px;
+  height: 40px;
+  background-color: var(--green-color);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+}
+
 
 body {
     font-family: "Tajawal", sans-serif !important;
