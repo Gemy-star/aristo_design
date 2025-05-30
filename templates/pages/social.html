@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block css %}
+<style>
+    .profile {
+        margin-bottom: 2rem;
+    }
+    .profile img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .profile h1 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+    .links a {
+        display: block;
+        margin: 1rem auto;
+        padding: 1rem;
+        width: 100%;
+        max-width: 500px;
+        background-color: #000000;
+        text-decoration: none;
+        color: #DDB55B;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        transition: all 0.2s ease-in-out;
+    }
+    .links a:hover {
+        background-color: #d1d1d1;
+    }
+    .links i {
+        margin-left: 0.5rem;
+    }
+</style>
+{% endblock css %}
+
+{% block content %}
+<!-- page-title -->
+<div class="tf-page-title">
+    <div class="container-full">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading text-center text_aristo">{% trans 'روابط التواصل' %}</div>
+                <ul class="breadcrumbs d-flex align-items-center justify-content-center">
+                    <li>
+                        <a class="text_aristo" href="{% url 'home_page' %}">{% trans 'الرئيسية' %}</a>
+                    </li>
+                    <li>
+                        <i class="icon-arrow-right"></i>
+                    </li>
+                    <li class="text_aristo">
+                        {% trans 'روابط التواصل' %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /page-title -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-center">
+                <div class="profile">
+                    <img src="{% static 'images/logo/logo-small.png' %}" alt="Profile Picture" />
+                    <h1 style="color: #DDB55B">{{ config.ORG_NAME|default:_("اسم الشركة") }}</h1>
+                </div>
+            </div>
+
+            <div style="padding: 0 0 66px;" class="d-flex justify-content-center">
+                <div class="links">
+                    {% if config.WHATSAPP_PHONE %}
+                    <a href="https://wa.me/{{ config.WHATSAPP_PHONE }}" target="_blank">
+                        <i class="fab fa-whatsapp"></i> {% trans 'واتساب' %}
+                    </a>
+                    {% endif %}
+
+                    {% if config.FACEBOOK_URL %}
+                    <a href="{{ config.FACEBOOK_URL }}" target="_blank">
+                        <i class="fab fa-facebook"></i> {% trans 'فيسبوك' %}
+                    </a>
+                    {% endif %}
+
+                    {% if config.INSTAGRAM_URL %}
+                    <a href="{{ config.INSTAGRAM_URL }}" target="_blank">
+                        <i class="fab fa-instagram"></i> {% trans 'انستجرام' %}
+                    </a>
+                    {% endif %}
+
+                    {% if config.TIKTOK_URL %}
+                    <a href="{{ config.TIKTOK_URL }}" target="_blank">
+                        <i class="fab fa-tiktok"></i> {% trans 'تيك توك' %}
+                    </a>
+                    {% endif %}
+
+                    {% if config.CONTACT_EMAIL %}
+                    <a href="mailto:{{ config.CONTACT_EMAIL }}">
+                        <i class="far fa-envelope"></i> {% trans 'إيميل' %}
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

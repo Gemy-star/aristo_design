@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'main',
    'imagekit',
    'modeltranslation',
+    "constance",
+    "constance.backends.database",
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -66,6 +68,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'main.context_processors.portal_data',
+                'constance.context_processors.config',
             ],
         },
     },
@@ -138,3 +141,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+
+
+CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
+
+CONSTANCE_CONFIG = {
+    'CONTACT_EMAIL': ('info@aristo-design.com', 'البريد الإلكتروني للتواصل'),
+    'CONTACT_PHONE': ('+201234567890', 'رقم الهاتف الرسمي'),
+    'WHATSAPP_PHONE': ('+201234567890', 'رقم الواتساب الرسمي'),
+    'FACEBOOK_URL': ('https://facebook.com/yourpage', 'رابط صفحة فيسبوك'),
+    'INSTAGRAM_URL': ('https://instagram.com/yourprofile', 'رابط انستغرام'),
+    'TIKTOK_URL': ('https://tiktok.com/@yourprofile', 'رابط تيك توك'),
+    'ORG_NAME': ('Aristo Design', 'إسم المؤسسة'),
+    'ORG_ADDRESS': ('القاهرة , مصر', 'عنوان المؤسسة'),
+
+}

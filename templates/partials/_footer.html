@@ -1,4 +1,4 @@
-{% load static %}
+{% load static  %}
 {% load i18n %}
 
 <footer id="footer" class="footer bg-black md-pb-70" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
@@ -12,36 +12,26 @@
                                 <img src="{% static 'images/logo/logo.png' %}" alt="{% trans 'شعار الموقع' %}">
                             </div>
                             <ul class="list-unstyled">
-                                <li class="text_aristo"><strong>{% trans 'اسم المؤسسة:' %}</strong> Aristo Design</li>
-                                <li class="text_aristo"><strong>{% trans 'المقر:' %}</strong> {% trans 'القاهرة، مصر' %}</li>
-                                <li class="text_aristo"><strong>{% trans 'البريد الإلكتروني:' %}</strong> info@aristo-design.com</li>
+                                <li class="text_aristo"><strong>{% trans 'اسم المؤسسة:' %}</strong> {{ config.ORG_NAME }}</li>
+                                <li class="text_aristo"><strong>{% trans 'المقر:' %}</strong> {{ config.ORG_ADDRESS }}</li>
+                                <li class="text_aristo"><strong>{% trans 'البريد الإلكتروني:' %}</strong> {{ config.CONTACT_EMAIL }}</li>
                             </ul>
 
                             <!-- Social Icons -->
                             <ul class="tf-social-icon d-flex gap-10 mt-3">
                                 <li>
-                                    <a href="#" class="box-icon w_34 round social-facebook social-line text_aristo">
+                                    <a href="{{ config.FACEBOOK_URL }}" class="box-icon w_34 round social-facebook social-line text_aristo">
                                         <i class="icon fs-14 icon-fb"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="box-icon w_34 round social-twitter social-line text_aristo">
-                                        <i class="icon fs-12 icon-Icon-x"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="box-icon w_34 round social-instagram social-line text_aristo">
+                                    <a href="{{ config.INSTAGRAM_URL }}" class="box-icon w_34 round social-instagram social-line text_aristo">
                                         <i class="icon fs-14 icon-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="box-icon w_34 round social-tiktok social-line text_aristo">
+                                    <a href="{{ config.TIKTOK_URL }}" class="box-icon w_34 round social-tiktok social-line text_aristo">
                                         <i class="icon fs-14 icon-tiktok"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="box-icon w_34 round social-pinterest social-line text_aristo">
-                                        <i class="icon fs-14 icon-pinterest-1"></i>
                                     </a>
                                 </li>
                             </ul>

@@ -11,7 +11,7 @@ class AboutPageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         projects = Project.objects.all()
-        context['gallery'] = projects
+        context['projects'] = projects
         return context
 
 class ContactPageView(TemplateView):
@@ -82,3 +82,6 @@ def project_detail(request, pk):
     project = get_object_or_404(Project, pk=pk)
     images = project.images.all()
     return render(request, 'pages/project_detail.html', {'project': project, 'images': images})
+
+class SocialMediaPageView(TemplateView):
+    template_name = 'pages/social.html'
