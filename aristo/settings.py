@@ -154,5 +154,4 @@ CONSTANCE_CONFIG = {
     'TIKTOK_URL': ('https://tiktok.com/@yourprofile', 'رابط تيك توك'),
     'ORG_NAME': ('Aristo Design', 'إسم المؤسسة'),
     'ORG_ADDRESS': ('القاهرة , مصر', 'عنوان المؤسسة'),
-
 }

@@ -4,7 +4,10 @@ from django.views.generic import TemplateView,DetailView
 from .models import Project, Blog, Contact, Category, HomeSlider
 from django.views.decorators.http import require_POST
 from django.utils.translation import gettext_lazy as _
-
+from django.views import View
+from django.http import HttpResponse
+import qrcode
+from io import BytesIO
 
 class AboutPageView(TemplateView):
     template_name = 'pages/about.html'
@@ -85,3 +88,26 @@ def project_detail(request, pk):
 
 class SocialMediaPageView(TemplateView):
     template_name = 'pages/social.html'
+
+
+
+
+class QRCodeView(View):
+    def get(self, request, *args, **kwargs):
+        data = request.GET.get("data", "https://linktr.ee/aristodesign")  # Default if no data param
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4,
+        )
+        qr.add_data(data)
+        qr.make(fit=True)
+
+        img = qr.make_image(fill="black", back_color="white")
+        buffer = BytesIO()
+        img.save(buffer, format="PNG")
+        buffer.seek(0)
+
+        return HttpResponse(buffer, content_type="image/png")
+

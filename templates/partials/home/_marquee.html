@@ -1,0 +1,16 @@
+<div class="tf-marquee marquee-sm bg_aristo" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
+    <div class="wrap-marquee speed-1">
+        {% for announcement in announcements %}
+        <div class="marquee-item">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="6" viewBox="0 0 7 6" fill="none">
+                    <path d="M3.5 0L6.53109 5.25H0.468911L3.5 0Z" fill="black"></path>
+                </svg>
+            </div>
+            <p class="text text-dark text-uppercase fw-6">
+                {{ announcement.title }}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,6 +1,6 @@
 {% load static %}
 {% load i18n %}
-<!-- Aristo Design - تعريف -->
+
 <style>
     .tf-img-with-text .tf-image-wrap img {
         width: 100%;
@@ -18,12 +18,10 @@
             <div class="tf-content-wrap text-end">
                 <div>
                     <h2 class="heading wow fadeInUp" data-wow-delay="0s">
-                        {% trans "أريستو ديزاين" %}<br>
-                        {% trans "لتشطيبات الشقق والفيلل" %}
+                        {{ about.title|default:_("أريستو ديزاين") }}
                     </h2>
                     <p class="description text_black-2 wow fadeInUp" data-wow-delay="0s">
-                        {% trans "نقدم خدمات التشطيب والديكور المتكاملة بمستوى احترافي يتناسب مع ذوقك واحتياجاتك." %}<br>
-                        {% trans "نتميز بتقديم تصاميم عصرية، تنفيذ دقيق، وجودة عالية في كل مشروع." %}
+                        {{ about.content|default:_("نقدم خدمات التشطيب والديكور المتكاملة بمستوى احترافي يتناسب مع ذوقك واحتياجاتك.") }}
                     </p>
                     <a href="{% url 'about_page' %}" class="tf-btn btn-line">
                         {% trans "تعرف على خدماتنا" %} <i class="icon icon-arrow1-top-left"></i>
@@ -39,4 +37,3 @@
         </div>
     </div>
 </section>
-<!-- /Aristo Design -->

@@ -36,17 +36,42 @@
                             {{ project.description }}
                         </div>
                     </blockquote>
+{% if project.images.count > 1 %}
+<div class="hover-sw-nav hover-sw-2">
+    <div class="swiper tf-sw-project-images wrap-sw-over"
+         data-preview="2" data-tablet="2" data-mobile="1"
+         data-space-lg="30" data-space-md="15"
+         data-pagination="1" data-pagination-md="1" data-pagination-lg="1">
+        <div class="swiper-wrapper">
+            {% for img in project.images.all %}
+            <div class="swiper-slide" lazy="true">
+                <div class="card-product style-3">
+                    <div class="card-product-wrapper">
+                        <a href="{{ img.image_resized.url }}" class="product-img">
+                            <img class="img-product lazyload"
+                                 data-src="{{ img.image_resized.url }}"
+                                 src="{{ img.image_resized.url }}"
+                                 alt="Project Image {{ forloop.counter }}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Navigation buttons -->
+        <div class="nav-sw nav-next-slider box-icon w_46 round">
+            <span class="icon icon-arrow-left"></span>
+        </div>
+        <div class="nav-sw nav-prev-slider box-icon w_46 round">
+            <span class="icon icon-arrow-right"></span>
+        </div>
 
-                    <!-- Additional Project Images -->
-                    {% if project.images.count > 1 %}
-                        <div class="grid-image">
-                            {% for img in project.images.all|slice:"1:3" %}
-                                <div>
-                                    <img class="lazyload" data-src="{{ img.image_resized.url }}" src="{{ img.image_resized.url }}" alt="Project Image {{ forloop.counter }}">
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
+        <!-- Pagination bullets -->
+        <div class="sw-dots style-2 sw-pagination-project justify-content-center"></div>
+    </div>
+</div>
+{% endif %}
+
                 </div>
             </div>
         </div>
@@ -60,3 +85,37 @@
 <!-- /blog-detail -->
 
 {% endblock %}
+
+
+{% block js %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.tf-sw-project-images', {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        pagination: {
+            el: '.sw-pagination-project',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.nav-next-slider',
+            prevEl: '.nav-prev-slider',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+        },
+    });
+});
+
+</script>
+
+{% endblock js %}
+
+

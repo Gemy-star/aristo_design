@@ -13,6 +13,16 @@ class ProjectImageInline(admin.TabularInline):
 class ProjectAdmin(admin.ModelAdmin):
     inlines = [ProjectImageInline]
 
+
+@admin.register(models.AboutPage)
+class SingletonPageAdmin(admin.ModelAdmin):
+    def has_add_permission(self, request):
+        # Prevent adding more than one
+        return not models.AboutPage.objects.exists()
+
+    def has_delete_permission(self, request, obj=None):
+        # Prevent deletion
+        return False
 admin.site.register(models.Project, ProjectAdmin)
 admin.site.register(models.Blog)
 admin.site.register(models.Contact)

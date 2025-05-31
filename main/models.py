@@ -2,14 +2,39 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
+from django.core.exceptions import ValidationError
 
+class SingletonModel(models.Model):
+    """
+    Abstract base class to enforce a singleton instance.
+    """
+    class Meta:
+        abstract = True
+
+    def save(self, *args, **kwargs):
+        if not self.pk and self.__class__.objects.exists():
+            raise ValidationError(f"Only one instance of {self.__class__.__name__} is allowed.")
+        super().save(*args, **kwargs)
+
+    @classmethod
+    def get_instance(cls):
+        obj, created = cls.objects.get_or_create(pk=1)
+        return obj
+
+
+class AboutPage(SingletonModel):
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.title
 
 class HomeSlider(models.Model):
     image = models.ImageField(upload_to='slider/', verbose_name=_("Slider Image"))
     # Processed image (1920x600)
     image_resized = ImageSpecField(
         source='image',
-        processors=[ResizeToFill(1920, 600)],
+        processors=[ResizeToFill(1920, 900)],
         format='JPEG',
         options={'quality': 85}
     )
