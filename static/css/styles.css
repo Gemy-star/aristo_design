@@ -728,10 +728,10 @@ video {
   background-color: #f6f6f6;
 }
 .bg_aristo {
-  background-color: #DDB55B;
+  background-color: #DDB55B !important;
 }
 .text_aristo {
-  color: #DDB55B;
+  color: #DDB55B !important;
 }
 .bg_grey-6 {
   background-color: #f9f6ef;

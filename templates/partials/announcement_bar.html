@@ -1,10 +1,54 @@
 {% load static i18n %}
+<style>
+.bg-dark-bg-gradient {
+  /* Transparent black shadow gradient */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.0) 0%,       /* fully transparent */
+    rgba(0, 0, 0, 0.6) 50%,      /* semi-transparent black */
+    rgba(0, 0, 0, 0.0) 100%      /* fully transparent */
+  );
+  /* fallback solid transparent */
+  background-color: transparent;
+}
+
+    /* Rounded language select */
+.top-bar-language select.form-select-lg {
+    border-radius: 50px !important;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+/* Rounded announcement slides */
+.tf-sw-top_bar .swiper-slide p.top-bar-text {
+    background-color: rgba(255, 255, 255, 0.1); /* subtle bg */
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* Rounded phone/email spans with some background and padding */
+.tf-top-bar_left .d-flex span {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* For RTL, adjust margin */
+[dir="rtl"] .tf-top-bar_left .d-flex span {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+</style>
 <!-- Top bar -->
-<div class="tf-top-bar bg_dark line" style="direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
+<div class="tf-top-bar bg-dark-bg-gradient line" style="border-radius: 50px !important;direction: {% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %};">
     <div class="px_15 lg-px_40">
         <div class="tf-top-bar_wrap grid-3 gap-30 align-items-center">
             <div class="tf-top-bar_left">
-                <div class="d-flex gap-30 text_white fw-5">
+                <div class="d-flex gap-30 text_aristo fw-5">
                     <span>{{ config.CONTACT_PHONE }}</span>
                     <span>{{ config.CONTACT_EMAIL }}</span>
                 </div>
@@ -14,7 +58,7 @@
                     <div class="swiper-wrapper">
                         {% for announce in announcements %}
                             <div class="swiper-slide">
-                                <p class="top-bar-text fw-5 text_white">
+                                <p class="top-bar-text fw-5 text_aristo">
                                     {{ announce.title }}
                                 </p>
                             </div>
@@ -28,8 +72,8 @@
                        {% csrf_token %}
                         <input type="hidden" name="next" value="{{ request.path }}">
                         <select name="language" class="form-select-lg  image-select center style-default type-languages color-white" onchange="this.form.submit()">
-                            <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-                            <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربية</option>
+                            <option  value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+                            <option  value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>العربية</option>
                         </select>
                     </form>
                 </div>
